@@ -20,8 +20,14 @@
 
 # COMMAND ----------
 
+# MAGIC %pip install mlflow
+
+# COMMAND ----------
+
 # This command is only required if you are using a cluster running DBR 7.3 LTS ML or below. 
 #%pip install --upgrade cloudpickle
+
+
 
 # COMMAND ----------
 
@@ -46,16 +52,28 @@
 # If you have the File > Upload Data menu option, follow the instructions in the previous cell to upload the data from your local machine.
 # The generated code, including the required edits described in the previous cell, is shown here for reference.
 
-import pandas as pd
+# import pandas as pd
 
 # In the following lines, replace <username> with your username.
-white_wine = pd.read_csv("/dbfs/FileStore/shared_uploads/<username>/winequality_white.csv", sep=';')
-red_wine = pd.read_csv("/dbfs/FileStore/shared_uploads/<username>/winequality_red.csv", sep=';')
+# white_wine = pd.read_csv("/dbfs/FileStore/shared_uploads/<username>/winequality_white.csv", sep=';')
+# red_wine = pd.read_csv("/dbfs/FileStore/shared_uploads/<username>/winequality_red.csv", sep=';')
 
 # If you do not have the File > Upload Data menu option, uncomment and run these lines to load the dataset.
 
 #white_wine = pd.read_csv("/dbfs/databricks-datasets/wine-quality/winequality-white.csv", sep=";")
 #red_wine = pd.read_csv("/dbfs/databricks-datasets/wine-quality/winequality-red.csv", sep=";")
+
+# COMMAND ----------
+
+import pandas as pd
+
+white_wine = pd.read_csv("winequality-white.csv", sep=';')
+red_wine = pd.read_csv("winequality-red.csv", sep=';')
+
+# COMMAND ----------
+
+# MAGIC %sh
+# MAGIC ls
 
 # COMMAND ----------
 
