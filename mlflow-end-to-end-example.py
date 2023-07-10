@@ -302,6 +302,7 @@ client.transition_model_version_stage(
   stage="Production",
 )
 
+
 # COMMAND ----------
 
 # MAGIC %md The Models page now shows the model version in stage "Production".
